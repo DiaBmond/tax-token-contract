@@ -10,6 +10,8 @@ jobs:
     test-tax-token:
         name: test TaxToken
         runs-on: ubuntu-latest
+        env:
+            SEPOLIA_RPC_URL: "https://dummy-rpc-url.com"
 
         steps:
             - name: Checkout Code
