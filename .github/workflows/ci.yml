@@ -1,0 +1,31 @@
+name: CI Pipeline (Tax Token)
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+jobs:
+    test-tax-token:
+        name: test TaxToken
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "22.x"
+                  cache: "npm"
+
+            - name: Download Dependencies
+              run: npm ci
+
+            - name: Compile Smart Contracts
+              run: npx hardhat compile
+
+            - name: Run Test Suite
+              run: npx hardhat test
