@@ -1,3 +1,4 @@
 {
-  "TaxTokenModule#TaxToken": "0x6c8296FB32b578cEf4DF647ef30337c7A09CDF9e"
+  "TokenSaleModule#TaxToken": "0x803fbb28C345D04789d53dc02B1E7206fFa1f956",
+  "TokenSaleModule#TokenSale": "0xE2c5836b86B335C60f47D298ede68f6C04f8F81B"
 }
